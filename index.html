@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-us" id="Miguel Laguna" dir="ltr">
+
+<!-- Copyright The Closure Library Authors.
+ SPDX-License-Identifier:  Laguna -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="https://img.icons8.com/ultraviolet/40/000000/paste-as-text.png" />
+
+  <title>Tareas.Laguna</title>
+
+
+<body onload="checkCookie()"></body>
+</head>
+
+<body>
+
+
+  <nav class="navbar navbar-light bg-light" id="navbar">
+    <div class="container">
+      <a href="#" class="navbar-brand">Aplicación de Tareas.Laguna</a>
+      <img src="https://img.icons8.com/ultraviolet/40/000000/paste-as-text.png" alt="">
+
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row pt-5">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <form id="formTask">
+              <div class="form-group">
+                <input type="text" name="name" id="title" minlength="3" maxlength="40" aria-hidden="name"
+                  autocomplete="name" required placeholder="Nombre de la Cita" class="form-control">
+              </div>
+              <div class="form-group pt-4">
+                <textarea id="description" class="form-control" placeholder="Descripción de la Cita" cols="40" rows="8"
+                  minlength="6" maxlength="200" autocomplete="text" required></textarea>
+              </div>
+              <div class="form-group pt-4">
+                <p id="ponga">Ponga la Fecha:<img src="https://img.icons8.com/fluency/28/null/low-priority.png"
+                    title="icon" /></p>
+                <input type="date" name="data" id="fecha" required placeholder="MM/DD/YYYY" value="date"
+                  class="form-control">
+              </div>
+
+              <button type="submit" aria-placeholder="Date" class="btn btn-primary btn-block md-3" id="boton">
+                Guardar
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 pt-4 colores">
+        <div id="tasks"></div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+<script src="app.js"></script>
+<script src="mensaje.js"></script>
+
+</html>
