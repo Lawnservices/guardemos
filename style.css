@@ -29,10 +29,10 @@
 }
 
 .colores {
-    background-color: rgba(18, 133, 247, 0.4);
+    background-color: rgba(125, 251, 199, 0.4);
     margin-left: auto;
     margin-right: auto;
-    border-radius: 0.4rem;
+    border-radius: 0.2rem;
     text-align: justify;
     height: fit-content;
 }
