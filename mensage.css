@@ -29,3 +29,19 @@ h2{
     color: blue;
   }
 }
+
+footer {
+  width: 100%;
+  height: 100px;
+  background-color: #154256;
+  text-align: center;
+  margin-top: 200px;
+  position:relative;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+footer h4{
+  color: #fff;
+  padding: 10px 10px;
+  
+}
