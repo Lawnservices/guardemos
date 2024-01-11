@@ -34,7 +34,7 @@ li a{
   
 }
   ul li {
-    display:block;
+    display:inline;
   }
   li a{
   padding: 18px 18px;
