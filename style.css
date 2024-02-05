@@ -1,44 +1,44 @@
 #description {
-    resize: none;
+  resize: none;
 }
 
 #boton {
-    margin-top: 20px;
-    width: 80%;
-    margin-left: 10%;
+  margin-top: 20px;
+  width: 80%;
+  margin-left: 10%;
 }
 
 #navbar {
-    border-bottom: 3px solid #154;
+  border-bottom: 3px solid #154;
 }
 
 #fecha {
-    width: 80%;
-    margin-left: 10%;
-    background-color: #04aa6d;
-    color: #fff;
-    cursor: pointer;
+  width: 80%;
+  margin-left: 10%;
+  background-color: #04aa6d;
+  color: #fff;
+  cursor: pointer;
 }
 
 #ponga {
-    margin-left: 10%;
-    color: #04aa6d;
+  margin-left: 10%;
+  color: #04aa6d;
 }
 
 #ponga img {
-    margin-left: 10%;
+  margin-left: 10%;
 }
 
 .colores {
-    background-color:#333;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 0.1rem;
-    text-align: justify;
-    height: fit-content;
+  background-color: #333;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0.1rem;
+  text-align: justify;
+  height: fit-content;
 }
 
 #tasks {
-    color: #0366b6;
-    font-size: 1.4rem;
+  color: #0366b6;
+  font-size: 1.4rem;
 }

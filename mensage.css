@@ -1,29 +1,26 @@
-.mensaje{
-background-color:#f6f6f6;
-width: 80%;
-height: 460px;
-margin-left: auto;
-margin-right: auto;
-box-shadow: 0px 0px 26px #1548;
-text-align: center;
+.mensaje {
+  background-color: #f6f6f6;
+  width: 80%;
+  height: 460px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 0px 26px #1548;
+  text-align: center;
 }
-.mensaje p{
+.mensaje p {
   font-size: 2rem;
   color: green;
   padding: 60px;
-  
-  
 }
-h2{
+h2 {
   color: blue;
 }
-@media (min-width:340px)and(max-width:1000px)  {
-  .mensaje{
+@media (min-width: 340px) and(max-width:1000px) {
+  .mensaje {
     width: 90%;
     height: 460px;
-
   }
-  .mensaje p{
+  .mensaje p {
     padding: 10px;
     font-size: 1.6rem;
     color: blue;
@@ -36,12 +33,11 @@ footer {
   background-color: #154256;
   text-align: center;
   margin-top: 200px;
-  position:relative;
+  position: relative;
   overflow: hidden;
   margin-bottom: 0;
 }
-footer h4{
+footer h4 {
   color: #fff;
   padding: 10px 10px;
-  
 }
