@@ -43,23 +43,17 @@
         <a href="#" class="navbar-brand"
           >Tareas.Laguna <br />Task Application.</a
         >
-        <a
-          href="https://www.youtube.com/channel/UCaZ_FoEDUrrHj_FKiEPLkyA"
-          title="Subscribe to our YouTube channel"
-          target="#"
-          ><img
+         <img
             src="https://img.icons8.com/ultraviolet/40/000000/paste-as-text.png"
             alt="videos"
           />
-        </a>
+      
       </div>
     </nav>
     <div class="social">
       <ul>
-        <li><a href="https://lagunalawnservice.com/">Home</a></li>
-        <li>
-          <a href="https://lagunalawnservice.com/social%20networks">Socials</a>
-        </li>
+        <li><a href="#">Home</a></li>
+        
       </ul>
     </div>
     <div class="container">
@@ -77,6 +71,19 @@
                     autocomplete="name"
                     required
                     placeholder="Nombre de la Cita | Appointment Name"
+                    class="form-control"
+                    title="complete this field"
+                  />
+                </div>
+                 <div class="form-group pt-4">
+                  <input  
+                    type="text"
+                    id="telefono"
+                    minlength="3"
+                    maxlength="40"
+                    autocomplete="name"
+                    required
+                    placeholder="Telefono | phone"
                     class="form-control"
                     title="complete this field"
                   />
@@ -101,8 +108,9 @@
                       title="icon"
                     />
                   </p>
-                  <input
-                    name="data"
+                   
+                  <input type="date"
+                    name="date"
                     id="fecha"
                     required
                     class="form-control"
@@ -135,5 +143,6 @@
 
     <script src="app.js"></script>
     <script src="mensaje.js"></script>
+    <script src="colores.js"></script>
   </body>
 </html>
