@@ -1,13 +1,14 @@
 document.getElementById("formTask").addEventListener("submit", saveTask);
 
 function saveTask(e) {
+  let casa = document.getElementById("casa").value;
   let title = document.getElementById("title").value;
   let telefono = document.getElementById("telefono").value;
   let description = document.getElementById("description").value;
   let fecha = document.getElementById("fecha").value;
-   
 
   const task = {
+    casa,
     title,
     telefono,
     description,
@@ -37,6 +38,7 @@ function getTasks() {
   tasksView.innerHTML = "";
 
   for (let i = 0; i < tasks.length; i++) {
+    let casa = tasks[i].casa;
     let title = tasks[i].title;
     let telefono = tasks[i].telefono;
     let description = tasks[i].description;
@@ -44,10 +46,14 @@ function getTasks() {
 
     tasksView.innerHTML += `<div class="card mb-3">
         <div class="card-body">
-        <p>${title} - ${telefono} - ${description} - ${fecha}</p>
+        <p>${casa} - ${title} - ${telefono} - ${description} - ${fecha}</p>
         <a class="btn btn-danger" onclick="deleteTask('${title}')">
         Eliminar
         </a>
+        <a class="btn btn1 btn-danger" id='deleteTask' onclick="aprenda('${telefono}')">
+        Print
+        </a>
+       
         </div>
         <div>`;
   }
@@ -64,8 +70,6 @@ function deleteTask(title) {
   getTasks();
 }
 getTasks();
-
-
 
 // todo es galleta
 function setCookie(cname, cvalue, exdays) {

@@ -23,7 +23,7 @@ li a {
   text-decoration: none;
   color: #fff;
 }
-@media (min-width: 320px) and (max-width: 600px) {
+@media (min-width: 300px) and (max-width: 600px) {
   .navbar {
     background-color: #003349;
     overflow: hidden;
@@ -41,4 +41,5 @@ li a {
     text-decoration: none;
     color: #fff;
   }
+   
 }

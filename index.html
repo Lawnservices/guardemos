@@ -52,15 +52,30 @@
     </nav>
     <div class="social">
       <ul>
-        <li><a href="#">Home</a></li>
+       
+        <li id="navbarr"></li>
       </ul>
     </div>
+
     <div class="container">
       <div class="row pt-5">
         <div class="col-md-4">
           <div class="card">
             <div class="card-body">
               <form id="formTask">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    id="casa"
+                    minlength="0"
+                    maxlength="40"
+                    autocomplete="Id"
+                    required
+                    placeholder="Nombre | Name"
+                    class="form-control"
+                    title="complete this field"
+                  />
+                </div>
                 <div class="form-group">
                   <input
                     type="text"
@@ -144,5 +159,6 @@
     <script src="app.js"></script>
     <script src="mensaje.js"></script>
     <script src="colores.js"></script>
+    <script src="na.js"></script>
   </body>
 </html>

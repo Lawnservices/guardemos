@@ -1,7 +1,11 @@
 #description {
   resize: none;
 }
-
+.btn1{
+  background-color: #04aa6d;
+  border: none;
+}
+ 
 #boton {
   margin-top: 20px;
   width: 80%;
@@ -45,4 +49,7 @@
 }
 html{
   scroll-behavior: smooth;
+}
+#casa{
+   margin: 10px 0px;
 }
