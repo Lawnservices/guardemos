@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .register-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+        h2 {
+            color: #4A90E2;
+            margin-bottom: 20px;
+        }
+        .register-input {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .register-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            width: 100%;
+        }
+        .register-btn:hover {
+            background-color: #45a049;
+        }
+        .error {
+            color: #d9534f;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <h2>Registro de Usuario</h2>
+        <input type="text" id="newUsername" class="register-input" placeholder="Usuario" required>
+        <input type="password" id="newPassword" class="register-input" placeholder="Contraseña" required>
+        <button class="register-btn" onclick="registrar()">Registrar</button>
+        <p id="mensaje" class="error" style="display: none;"></p>
+        <p><a href="login.html">¿Ya tienes una cuenta? Inicia sesión aquí</a></p>
+    </div>
+
+    <script>
+        function hashPassword(password) {
+            return btoa(password).split('').reverse().join('');
+        }
+        
+        function registrar() {
+            const newUsername = document.getElementById("newUsername").value;
+            const newPassword = document.getElementById("newPassword").value;
+            const mensaje = document.getElementById("mensaje");
+
+            // Validar que el usuario y la contraseña no estén vacíos
+            if (!newUsername || !newPassword) {
+                mensaje.innerText = "Por favor, completa todos los campos.";
+                mensaje.style.display = "block";
+                return;
+            }
+
+            // Verificar si el usuario ya existe
+            if (localStorage.getItem(`user_${newUsername}`)) {
+                mensaje.innerText = "El usuario ya existe.";
+                mensaje.style.display = "block";
+            } else {
+                const hashedPassword = hashPassword(newPassword);
+                localStorage.setItem(`user_${newUsername}`, hashedPassword);
+                mensaje.innerText = "Usuario registrado exitosamente.";
+                mensaje.style.display = "block";
+                setTimeout(() => {
+                    window.location.href = "login.html";
+                }, 2000);
+            }
+        }
+    </script>
+</body>
+</html>
