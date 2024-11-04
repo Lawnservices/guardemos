@@ -61,7 +61,7 @@
         <input type="password" id="password" class="login-input" placeholder="Contraseña" required>
         <button class="login-btn" onclick="login()">Entrar</button>
         <p id="error" class="error" style="display: none;">Usuario o contraseña incorrectos</p>
-        <p><a href="registro.html">¿No tienes una cuenta? Regístrate aquí</a></p>
+        <p><a href="registro">¿No tienes una cuenta? Regístrate aquí</a></p>
     </div>
 
     <script>
@@ -79,7 +79,7 @@
                 const authToken = btoa(`${username}:${new Date().toISOString()}`);
                 localStorage.setItem("authToken", authToken);
                 localStorage.setItem("currentUser", username);
-                window.location.href = "notas.html";
+                window.location.href = "notas";
             } else {
                 error.innerText = "Usuario o contraseña incorrectos";
                 error.style.display = "block";
@@ -88,7 +88,7 @@
 
         window.onload = function() {
             if (localStorage.getItem("authToken")) {
-                window.location.href = "notas.html";
+                window.location.href = "notas";
             }
         };
     </script>

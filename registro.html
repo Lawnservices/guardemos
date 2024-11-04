@@ -61,7 +61,7 @@
         <input type="password" id="newPassword" class="register-input" placeholder="Contraseña" required>
         <button class="register-btn" onclick="registrar()">Registrar</button>
         <p id="mensaje" class="error" style="display: none;"></p>
-        <p><a href="login.html">¿Ya tienes una cuenta? Inicia sesión aquí</a></p>
+        <p><a href="login">¿Ya tienes una cuenta? Inicia sesión aquí</a></p>
     </div>
 
     <script>
@@ -91,7 +91,7 @@
                 mensaje.innerText = "Usuario registrado exitosamente.";
                 mensaje.style.display = "block";
                 setTimeout(() => {
-                    window.location.href = "login.html";
+                    window.location.href = "login";
                 }, 2000);
             }
         }
