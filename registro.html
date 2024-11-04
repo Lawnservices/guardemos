@@ -35,7 +35,7 @@
             border: 1px solid #ddd;
             border-radius: 4px;
         }
-        .register-btn {
+        .register-btn, .generate-btn {
             background-color: #4CAF50;
             color: white;
             padding: 10px;
@@ -44,8 +44,9 @@
             cursor: pointer;
             font-size: 1em;
             width: 100%;
+            margin-top: 10px;
         }
-        .register-btn:hover {
+        .register-btn:hover, .generate-btn:hover {
             background-color: #45a049;
         }
         .error {
@@ -59,6 +60,7 @@
         <h2>Registro de Usuario</h2>
         <input type="text" id="newUsername" class="register-input" placeholder="Usuario" required>
         <input type="password" id="newPassword" class="register-input" placeholder="Contraseña" required>
+        <!-- <button class="generate-btn" onclick="generarContrasena()">Generar Contraseña</button> -->
         <button class="register-btn" onclick="registrar()">Registrar</button>
         <p id="mensaje" class="error" style="display: none;"></p>
         <p><a href="login">¿Ya tienes una cuenta? Inicia sesión aquí</a></p>
@@ -67,6 +69,16 @@
     <script>
         function hashPassword(password) {
             return btoa(password).split('').reverse().join('');
+        }
+        
+        function generarContrasena() {
+            const caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+";
+            let contrasena = "";
+            for (let i = 0; i < 12; i++) {
+                const indice = Math.floor(Math.random() * caracteres.length);
+                contrasena += caracteres.charAt(indice);
+            }
+            document.getElementById("newPassword").value = contrasena;
         }
         
         function registrar() {
