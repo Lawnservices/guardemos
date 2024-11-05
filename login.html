@@ -5,16 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión</title>
     <style>
-        body {
+        
+          body {
             font-family: Arial, sans-serif;
             background-color: #f0f4f8;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            height: 100vh;
             margin: 0;
+            min-height: 100vh;
         }
         .login-container {
+            margin-top: 160px;
             background-color: #ffffff;
             padding: 30px;
             border-radius: 8px;
@@ -52,9 +54,39 @@
             font-size: 0.9em;
             margin-top: 10px;
         }
+          .navbar {
+            width: 100%;
+            background-color: #4A90E2;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            box-sizing: border-box;
+        }
+        
+        .navbar a, .navbar button {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .navbar button:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
+    <div class="navbar">
+        <a href="#" onclick="event.preventDefault()">Notebook | Libro de Notas</a>
+        <a href="#">Login</a>
+        
+        <!-- <button onclick="logout()">Cerrar Sesión</button> -->
+    </div>
     <div class="login-container">
         <h2>Iniciar Sesión</h2>
         <input type="text" id="username" class="login-input" placeholder="Usuario" required>
