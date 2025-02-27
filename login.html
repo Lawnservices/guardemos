@@ -78,12 +78,15 @@
         .navbar button:hover {
             text-decoration: underline;
         }
+        a[onclick]{
+        pointer-events: none;
+        }
     </style>
 </head>
 <body>
     <div class="navbar">
-        <a href="#" onclick="event.preventDefault()">Notebook | Libro de Notas</a>
-        <a href="#">Login</a>
+        <a href="#"  onclick="return false">Notebook | Libro de Notas</a>
+        <a href="#"  onclick="return false">Login</a>
         
         <!-- <button onclick="logout()">Cerrar Sesión</button> -->
     </div>
