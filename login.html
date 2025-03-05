@@ -119,11 +119,11 @@
             const password = document.getElementById("password").value;
             const error = document.getElementById("error");
 
-            const savedHashedPassword = localStorage.getItem(`user_${username}`);
+            const savedHashedPassword = sessionStorage.getItem(`user_${username}`);
             if (savedHashedPassword && savedHashedPassword === hashPassword(password)) {
                 const authToken = btoa(`${username}:${new Date().toISOString()}`);
-                localStorage.setItem("authToken", authToken);
-                localStorage.setItem("currentUser", username);
+                sessionStorage.setItem("authToken", authToken);
+                sessionStorage.setItem("currentUser", username);
                 window.location.href = "notas";
             } else {
                 error.innerText = "Usuario o contraseña incorrectos";
@@ -132,7 +132,7 @@
         }
 
         window.onload = function() {
-            if (localStorage.getItem("authToken")) {
+            if (sessionStorage.getItem("authToken")) {
                 window.location.href = "notas";
             }
         };
