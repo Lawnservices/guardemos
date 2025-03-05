@@ -114,8 +114,8 @@
             const savedHashedPassword = localStorage.getItem(`user_${username}`);
             if (savedHashedPassword && savedHashedPassword === hashPassword(password)) {
                 const authToken = btoa(`${username}:${new Date().toISOString()}`);
-                sessionStorage.setItem("authToken", authToken);
-                sessionStorage.setItem("currentUser", username);
+                localStorage.setItem("authToken", authToken);
+                localStorage.setItem("currentUser", username);
                 window.location.href = "notas";
             } else {
                 error.innerText = "Usuario o contraseña incorrectos";
