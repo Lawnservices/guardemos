@@ -132,7 +132,7 @@
         }
 
         window.onload = function() {
-            if (sessionStorage.getItem("authToken")) {
+            if (localStorage.getItem("authToken")) {
                 window.location.href = "notas";
             }
         };
