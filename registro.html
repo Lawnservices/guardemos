@@ -135,12 +135,12 @@
             }
 
             // Verificar si el usuario ya existe
-            if (localStorage.getItem(`user_${newUsername}`)) {
+            if (sessionStorage.getItem(`user_${newUsername}`)) {
                 mensaje.innerText = "El usuario ya existe.";
                 mensaje.style.display = "block";
             } else {
                 const hashedPassword = hashPassword(newPassword);
-                localStorage.setItem(`user_${newUsername}`, hashedPassword);
+                sessionStorage.setItem(`user_${newUsername}`, hashedPassword);
                 mensaje.innerText = "Usuario registrado exitosamente.";
                 mensaje.style.display = "block";
                 setTimeout(() => {
