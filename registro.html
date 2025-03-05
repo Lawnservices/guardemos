@@ -87,15 +87,7 @@
         
         <!-- <button onclick="logout()">Cerrar Sesión</button> -->
     </div>
-    <script type="text/javascript">
-	atOptions = {
-		'key' : 'c9c5f41913a2cfee6715bb1872b100b7',
-		'format' : 'iframe',
-		'height' : 250,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
+ 
 <script type="text/javascript" src="//www.highperformanceformat.com/c9c5f41913a2cfee6715bb1872b100b7/invoke.js"></script>
     <div class="register-container">
         <h2>Registro de Usuario</h2>
@@ -135,12 +127,12 @@
             }
 
             // Verificar si el usuario ya existe
-            if (sessionStorage.getItem(`user_${newUsername}`)) {
+            if (localStorage.getItem(`user_${newUsername}`)) {
                 mensaje.innerText = "El usuario ya existe.";
                 mensaje.style.display = "block";
             } else {
                 const hashedPassword = hashPassword(newPassword);
-                sessionStorage.setItem(`user_${newUsername}`, hashedPassword);
+                localStorage.setItem(`user_${newUsername}`, hashedPassword);
                 mensaje.innerText = "Usuario registrado exitosamente.";
                 mensaje.style.display = "block";
                 setTimeout(() => {
