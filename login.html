@@ -119,7 +119,7 @@
             const password = document.getElementById("password").value;
             const error = document.getElementById("error");
 
-            const savedHashedPassword = sessionStorage.getItem(`user_${username}`);
+            const savedHashedPassword = localStorage.getItem(`user_${username}`);
             if (savedHashedPassword && savedHashedPassword === hashPassword(password)) {
                 const authToken = btoa(`${username}:${new Date().toISOString()}`);
                 sessionStorage.setItem("authToken", authToken);
