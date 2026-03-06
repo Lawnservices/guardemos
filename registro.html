@@ -77,6 +77,24 @@
         .navbar button:hover {
             text-decoration: underline;
         }
+        .cuenta{
+        max-width: 600px;
+        margin: 24px auto;
+
+        }
+        .cuenta p a{
+        font-size: 20px;
+        background-color: #333;
+        padding: 16px;
+        border-radius: 0.4rem;
+        color: white;
+        text-decoration: none;
+        transition:all 1s ease-in-out;
+        }
+        .cuenta p a:hover{
+        background-color: #111;
+       
+        }
     </style>
      
 </head>
@@ -96,9 +114,11 @@
         <!-- <button class="generate-btn" onclick="generarContrasena()">Generar Contraseña</button> -->
         <button class="register-btn" onclick="registrar()">Registrar</button>
         <p id="mensaje" class="error" style="display: none;"></p>
-        <p><a href="login">¿Ya tienes una cuenta? Inicia sesión aquí</a></p>
+        
     </div>
-
+    <section class="cuenta">
+         <p><a href="login">¿Ya tienes una cuenta? Inicia sesión aquí</a></p>
+    </section>
     <script>
         function hashPassword(password) {
             return btoa(password).split('').reverse().join('');

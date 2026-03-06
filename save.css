@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aplicación de Notas | Save your notes</title>
-    <style>
-        /* Estilos generales */
+  /* Estilos generales */
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f4f8;
@@ -127,25 +120,3 @@
         .deleteBtn:hover {
             background-color: #C9302C;
         }
-    </style>
-</head>
-<body>
-    <!-- Barra de navegación -->
-    <div class="navbar">
-        <a href="#" onclick="return false">Notebook | Libro de Notas</a>
-        <!-- <a href="#">Laguna</a> -->
-        
-        <button onclick="logout()">Cerrar Sesión</button>
-    </div>
-
-    <!-- Contenedor de la aplicación de notas -->
-    <div class="container">
-        <h2>Aplicación de Notas</h2>
-        <input type="text" id="inputText" placeholder="Escribe una nota...">
-        <button id="guardarBtn" onclick="guardarNota()">Guardar Nota</button>
-        <div id="notasContainer"></div>
-    </div>
-
-    <!-- <script src="notas.js"></script> -->
-</body>
-</html>

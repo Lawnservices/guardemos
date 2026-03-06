@@ -81,6 +81,22 @@
         a[onclick]{
         pointer-events: none;
         }
+        .aqui{
+        max-width: 600px;
+        margin: 24px auto;
+        }
+        .aqui p a{
+        text-decoration: none;
+        font-size: 20px;
+        background-color: #4A90E2;
+        padding: 16px;
+        border-radius: 0.4rem;
+        color: white;
+        transition: 1s ease-in-out;
+        }
+        .aqui p a:hover{
+        background-color: #d9534f;
+        }
     </style>
 </head>
 <body>
@@ -98,8 +114,11 @@
         <input type="password" id="password" class="login-input" placeholder="Contraseña" required>
         <button class="login-btn" onclick="login()">Entrar</button>
         <p id="error" class="error" style="display: none;">Usuario o contraseña incorrectos</p>
-        <p><a href="registro">¿No tienes una cuenta? Regístrate aquí</a></p>
+       
     </div>
+    <section class="aqui">
+          <p><a href="registro">¿No tienes una cuenta? Regístrate aquí</a></p>
+    </section>
 
     <script>
         function hashPassword(password) {
