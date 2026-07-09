@@ -2,29 +2,56 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <meta name="description" content="Puedes guardar tus notas seguras, y cuando las necesites, estarán en tus manos.">
-       <link rel="stylesheet" href="save.css">
-    <title>Aplicación de Notas | Save your notes</title>
-    
+
+    <title>Aplicación de Notas | Guarda tus notas online</title>
+
+    <meta name="description" content="Guarda tus notas de forma segura y accede a ellas desde cualquier dispositivo cuando las necesites.">
+
+    <meta name="author" content="ListaDeTareas.com">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="stylesheet" href="save.css">
+
+    <link rel="icon" href="/img/favicon.ico">
 </head>
+
 <body>
-    <!-- Barra de navegación -->
-    <div class="navbar">
+
+    <nav class="navbar">
         <a href="#" onclick="return false">Notebook | Libro de Notas</a>
-        <!-- <a href="#">Laguna</a> -->
-        
-        <button onclick="logout()">Cerrar Sesión</button>
-    </div>
 
-    <!-- Contenedor de la aplicación de notas -->
-    <div class="container">
-        <h2>Aplicación de Notas</h2>
-        <input type="text" id="inputText" placeholder="Escribe una nota...">
-        <button id="guardarBtn" onclick="guardarNota()">Guardar Nota</button>
+        <button type="button" onclick="logout()">
+            Cerrar sesión
+        </button>
+    </nav>
+
+    <main class="container">
+
+        <h1>Aplicación de Notas</h1>
+
+        <input
+            type="text"
+            id="inputText"
+            placeholder="Escribe una nota..."
+            maxlength="500"
+            autocomplete="off"
+        >
+
+        <button
+            id="guardarBtn"
+            type="button"
+            onclick="guardarNota()">
+            Guardar nota
+        </button>
+
         <div id="notasContainer"></div>
-    </div>
 
-<script src="save.js"></script>     
+    </main>
+
+    <script src="save.js" defer></script>
+
 </body>
 </html>
